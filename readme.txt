@@ -21,6 +21,9 @@ This plugin needs a network installation.
 
 == Changelog ==
 
+= 1.0.1 =
+* WP 4.3 compliant
+
 = 1.0.0 =
 * Plugin creation
 

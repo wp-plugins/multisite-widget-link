@@ -3,7 +3,7 @@
 Plugin Name: MultiSite Widget Link 
 Plugin URI: http://ecolosites.eelv.fr/multisite-widget-link/
 Description: Easily add widgets to link another blog in a multisite instance
-Version: 1.0.0
+Version: 1.0.1
 Author: bastho
 Author URI: http://ecolosites.eelv.fr/
 License: GPLv2
@@ -16,10 +16,13 @@ Network: 1
 load_plugin_textdomain( 'multisite_widget_link', false, 'multisite-widget-link/languages' );
 
 class MultiSiteWidgetLink extends WP_Widget {
-	function MultiSiteWidgetLink() {
+	function __construct() {
 		// Instantiate the parent object
 		parent::__construct( false, __('Link to neighbor site','multisite_widget_link') );
 	}
+        function MultiSiteWidgetLink(){
+            $this->__construct();
+        }
 
 	function widget( $args, $instance ) {
 	   global $wpdb;
